@@ -12,7 +12,7 @@ SLD_Step = 0.1;
     starting_params_number = 3+4*layNumber;
 
     tracker = 0; %start position of the SLD profile
-    
+
     for k = 1:layNumber
 
      x = transpose(0:SLD_Step:layThickness(k))
@@ -24,7 +24,7 @@ SLD_Step = 0.1;
          SLD_nextLayer_hydration = ((laySLD(k+1)*((1-layHydration(k+1))))+(layHydration(k+1)*bulk_out(1,contrast)));
          xout = x +tracker
          yout = y
-         tracker = tracker+x(end)+SLD_Step
+      %   tracker = tracker+x(end)+SLD_Step
 
 %          yout = yout+(SLD_nextLayer_hydration-SLD_Layer_hydration).*((erf((xout-tracker-SLD_Step)./layRough(k))+1)/2);
          %          yout = y*((laySLD(k+1)/laySLD(k))-1).*(((((erf((xout)/layRough(k)-tracker-SLD_Step))+1)/2)+1))
