@@ -1,0 +1,85 @@
+#!/bin/csh
+
+gmx density -s Job_42_3_run.tpr -f Job_42_3_run.xtc -n index_1.ndx -sl 30 -dens number -o Job_42_numdensPW_0000_0010.xvg -b 0000 -e 0010 << EOF
+29
+EOF
+
+gmx density -s Job_42_3_run.tpr -f Job_42_3_run.xtc -n index_1.ndx -sl 30 -dens number -o Job_42_numdensGRAP_0000_0010.xvg -b 0000 -e 0010 << EOF
+2
+EOF
+
+gmx density -s Job_42_3_run.tpr -f Job_42_3_run.xtc -n index_1.ndx -sl 30 -dens number -o Job_42_numdensARG_0000_0010.xvg -b 0000 -e 0010 << EOF
+ARG
+EOF
+
+gmx density -s Job_42_3_run.tpr -f Job_42_3_run.xtc -n index_1.ndx -sl 30 -dens number -o Job_42_numdensASN_0000_0010.xvg -b 0000 -e 0010 << EOF
+ASN
+EOF
+
+gmx density -s Job_42_3_run.tpr -f Job_42_3_run.xtc -n index_1.ndx -sl 30 -dens number -o Job_42_numdensASP_0000_0010.xvg -b 0000 -e 0010 << EOF
+ASP
+EOF
+
+gmx density -s Job_42_3_run.tpr -f Job_42_3_run.xtc -n index_1.ndx -sl 30 -dens number -o Job_42_numdensCYS_0000_0010.xvg -b 0000 -e 0010 << EOF
+CYS
+EOF
+
+gmx density -s Job_42_3_run.tpr -f Job_42_3_run.xtc -n index_1.ndx -sl 30 -dens number -o Job_42_numdensGLN_0000_0010.xvg -b 0000 -e 0010 << EOF
+GLN
+EOF
+
+gmx density -s Job_42_3_run.tpr -f Job_42_3_run.xtc -n index_1.ndx -sl 30 -dens number -o Job_42_numdensGLU_0000_0010.xvg -b 0000 -e 0010 << EOF
+GLU
+EOF
+
+gmx density -s Job_42_3_run.tpr -f Job_42_3_run.xtc -n index_1.ndx -sl 30 -dens number -o Job_42_numdensGLY_0000_0010.xvg -b 0000 -e 0010 << EOF
+GLY
+EOF
+
+gmx density -s Job_42_3_run.tpr -f Job_42_3_run.xtc -n index_1.ndx -sl 30 -dens number -o Job_42_numdensHIS_0000_0010.xvg -b 0000 -e 0010 << EOF
+HIS
+EOF
+
+gmx density -s Job_42_3_run.tpr -f Job_42_3_run.xtc -n index_1.ndx -sl 30 -dens number -o Job_42_numdensILE_0000_0010.xvg -b 0000 -e 0010 << EOF
+ILE
+EOF
+
+gmx density -s Job_42_3_run.tpr -f Job_42_3_run.xtc -n index_1.ndx -sl 30 -dens number -o Job_42_numdensLEU_0000_0010.xvg -b 0000 -e 0010 << EOF
+LEU
+EOF
+
+gmx density -s Job_42_3_run.tpr -f Job_42_3_run.xtc -n index_1.ndx -sl 30 -dens number -o Job_42_numdensLYS_0000_0010.xvg -b 0000 -e 0010 << EOF
+LYS
+EOF
+
+gmx density -s Job_42_3_run.tpr -f Job_42_3_run.xtc -n index_1.ndx -sl 30 -dens number -o Job_42_numdensMET_0000_0010.xvg -b 0000 -e 0010 << EOF
+MET
+EOF
+
+gmx density -s Job_42_3_run.tpr -f Job_42_3_run.xtc -n index_1.ndx -sl 30 -dens number -o Job_42_numdensPHE_0000_0010.xvg -b 0000 -e 0010 << EOF
+PHE
+EOF
+
+gmx density -s Job_42_3_run.tpr -f Job_42_3_run.xtc -n index_1.ndx -sl 30 -dens number -o Job_42_numdensPRO_0000_0010.xvg -b 0000 -e 0010 << EOF
+PRO
+EOF
+
+gmx density -s Job_42_3_run.tpr -f Job_42_3_run.xtc -n index_1.ndx -sl 30 -dens number -o Job_42_numdensSER_0000_0010.xvg -b 0000 -e 0010 << EOF
+SER
+EOF
+
+gmx density -s Job_42_3_run.tpr -f Job_42_3_run.xtc -n index_1.ndx -sl 30 -dens number -o Job_42_numdensTHR_0000_0010.xvg -b 0000 -e 0010 << EOF
+THR
+EOF
+
+gmx density -s Job_42_3_run.tpr -f Job_42_3_run.xtc -n index_1.ndx -sl 30 -dens number -o Job_42_numdensTRP_0000_0010.xvg -b 0000 -e 0010 << EOF
+TRP
+EOF
+
+gmx density -s Job_42_3_run.tpr -f Job_42_3_run.xtc -n index_1.ndx -sl 30 -dens number -o Job_42_numdensTYR_0000_0010.xvg -b 0000 -e 0010 << EOF
+TYR
+EOF
+
+gmx density -s Job_42_3_run.tpr -f Job_42_3_run.xtc -n index_1.ndx -sl 30 -dens number -o Job_42_numdensVAL_0000_0010.xvg -b 0000 -e 0010 << EOF
+VAL
+EOF
