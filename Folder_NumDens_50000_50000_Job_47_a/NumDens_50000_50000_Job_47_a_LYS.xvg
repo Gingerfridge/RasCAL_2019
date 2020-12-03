@@ -1,0 +1,54 @@
+# This file was created Thu Dec  3 12:03:50 2020
+# Created by:
+#             :-) GROMACS - gmx density, 2020.1-Ubuntu-2020.1-1 (-:
+# 
+# Executable:   /usr/bin/gmx
+# Data prefix:  /usr
+# Working dir:  /mnt/c/Users/mbcx4ph5/Dropbox (The University of Manchester)/PhD/CSF - Manchester/Computational Work/Gromacs/Job_47_Fab_Au_2
+# Command line:
+#   gmx density -s step5_1.tpr -f step5_1.xtc -n index_1_1.ndx -sl 30 -dens number -o NumDens_50000_50000_Job_47_a_LYS.xvg -b 50000 -e 50000
+# gmx density is part of G R O M A C S:
+#
+# GROningen Mixture of Alchemy and Childrens' Stories
+#
+@    title "Partial density"
+@    xaxis  label "Coordinate (nm)"
+@    yaxis  label "Number density (nm\S-3\N)"
+@TYPE xy
+@ view 0.15, 0.15, 0.75, 0.85
+@ legend on
+@ legend box on
+@ legend loctype view
+@ legend 0.78, 0.8
+@ legend length 2
+@ s0 legend "LYS"
+    0.202887                0
+     0.60866                0
+     1.01443                0
+     1.42021          1.29319
+     1.82598          1.96374
+     2.23175          2.32296
+     2.63753         0.526856
+      3.0433         0.694492
+     3.44907         0.622648
+     3.85485         0.933973
+     4.26062         0.790285
+     4.66639          1.43688
+     5.07217          1.62847
+     5.47794         0.455012
+     5.88371         0.502908
+     6.28949                0
+     6.69526                0
+     7.10103                0
+     7.50681                0
+     7.91258                0
+     8.31835                0
+     8.72413                0
+      9.1299                0
+     9.53567                0
+     9.94145                0
+     10.3472                0
+      10.753                0
+     11.1588                0
+     11.5645                0
+     11.9703                0
