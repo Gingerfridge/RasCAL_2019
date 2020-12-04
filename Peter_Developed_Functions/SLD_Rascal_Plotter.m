@@ -32,7 +32,7 @@ if Reflect_plot == 1
   for j = 1:Project_struct.problem.numberOfContrasts
 
       a = Project_struct.problem.calculations.Simulation{1,j}
-      a(:,2) = 10^(-1*j)*a(:,2);
+      a(:,2) = Project_struct.problem.scalefactors(1,j)*10^(-1*j)*a(:,2);
       b = Project_struct.problem.data{1,j}
       b(:,2) = 10^(-1*j)*b(:,2);
   hold on
