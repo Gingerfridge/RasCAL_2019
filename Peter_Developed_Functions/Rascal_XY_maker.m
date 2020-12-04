@@ -9,8 +9,8 @@ D2O_Frac = params(2*i);
 Hydration = params(2*i+1);
 
 %need to convert hydration to the same scale as 'Hydration variable'
-D2O_Frac = round(D2O_Frac,0);
-Hydration = round(Hydration,0);
+D2O_Frac = round(D2O_Frac,2);
+Hydration = round(Hydration,2);
 st_val = bulk_in(contrast);
 end_val = bulk_out(contrast);
 
