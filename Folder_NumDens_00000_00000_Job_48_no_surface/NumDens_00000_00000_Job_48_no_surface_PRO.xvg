@@ -1,0 +1,54 @@
+# This file was created Mon Dec  7 20:44:55 2020
+# Created by:
+#             :-) GROMACS - gmx density, 2020.1-Ubuntu-2020.1-1 (-:
+# 
+# Executable:   /usr/bin/gmx
+# Data prefix:  /usr
+# Working dir:  /mnt/c/Users/mbcx4ph5/Dropbox (The University of Manchester)/PhD/CSF - Manchester/Computational Work/Gromacs/Job_48_Imperial_work_1/files
+# Command line:
+#   gmx density -s prod-16.tpr -f prod-16.xtc -n index_1_1.ndx -sl 30 -dens number -o NumDens_00000_00000_Job_48_no_surface_PRO.xvg -b 00000 -e 00000
+# gmx density is part of G R O M A C S:
+#
+# S  C  A  M  O  R  G
+#
+@    title "Partial density"
+@    xaxis  label "Coordinate (nm)"
+@    yaxis  label "Number density (nm\S-3\N)"
+@TYPE xy
+@ view 0.15, 0.15, 0.75, 0.85
+@ legend on
+@ legend box on
+@ legend loctype view
+@ legend 0.78, 0.8
+@ legend length 2
+@ s0 legend "PRO"
+    0.416667                0
+        1.25                0
+     2.08333                0
+     2.91667                0
+        3.75                0
+     4.58333                0
+     5.41667                0
+        6.25                0
+     7.08333                0
+     7.91667                0
+        8.75                0
+     9.58333                0
+     10.4167         0.173098
+       11.25          0.63311
+     12.0833          1.38241
+     12.9167          1.19034
+       13.75          1.33499
+     14.5833          2.05109
+     15.4167          2.00366
+       16.25          1.01724
+     17.0833         0.661565
+     17.9167         0.618883
+       18.75         0.322483
+     19.5833        0.0308256
+     20.4167                0
+       21.25                0
+     22.0833                0
+     22.9167                0
+       23.75                0
+     24.5833                0

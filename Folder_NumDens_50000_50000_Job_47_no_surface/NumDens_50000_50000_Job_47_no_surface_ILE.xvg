@@ -1,4 +1,4 @@
-# This file was created Thu Dec  3 17:59:26 2020
+# This file was created Sun Dec  6 20:12:47 2020
 # Created by:
 #             :-) GROMACS - gmx density, 2020.1-Ubuntu-2020.1-1 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx density -s step5_1.tpr -f step5_1.xtc -n index_1_1.ndx -sl 30 -dens number -o NumDens_50000_50000_Job_47_no_surface_ILE.xvg -b 50000 -e 50000
 # gmx density is part of G R O M A C S:
 #
-# GROningen MAchine for Chemical Simulation
+# S  C  A  M  O  R  G
 #
 @    title "Partial density"
 @    xaxis  label "Coordinate (nm)"

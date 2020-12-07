@@ -2,7 +2,7 @@ function [SLD_AA_Hydrated_Profile,V_frac_AA_Hydrated,VOLFRAC_Surface,VOLFRAC_Wat
 % Loads xvg files from the current folder
 filenames = files();
 
-% define the number of files being read in 
+% define the number of files being read in
 a = size(filenames);
 
 %Calculate the amino acid properties from deuteration
@@ -59,11 +59,11 @@ str = filenames{1,j};
     MET(1,j) = contains(str,"MET");
     CYS(1,j) = contains(str,"CYS");
     PRO(1,j) = contains(str,"PRO");
-    
+
     %input the name of non AA residues here they will be out put in the
     %porder put in with the layer distance in misc_Ouput!
     GRAP(1,j) = contains(str,"AUM");
-    GRAP_SLD = 7e-6;
+    GRAP_SLD = 0e-6;
     GRAP_Vol = 169.3;
     PW(1,j) = contains(str,"SOL");
     PW_SLD = (6.35e-6+0.56e-6)*D2O_Frac-0.56e-6;
@@ -74,7 +74,11 @@ Misc_Volumes = transpose([GRAP_Vol; PW_Vol]);
 
 Logic_matrix = transpose([GLY; ALA; VAL; LEU; ILE; PHE; TYR; TRP; ASP; GLU; SER; THR; ASN; GLN; LYS; ARG; HIS; MET; CYS; PRO]);
 
+
+
 Misc_Logic_matrix = transpose([GRAP; PW]);
+
+
 
 for k = 1:a(1,2)
     Matrix(k,:) = Logic_matrix(k,:)*k;
@@ -93,33 +97,33 @@ b = size(Misc_MATRIX);
 
 for i = 1:b(1,2)
     input = Misc_MATRIX(i);
-    
+
     if input == 0
     else
         Data = importfile(filenames{1,Misc_MATRIX(i)});
         Misc_Output(:,i+1) = Data (:,2);
-    
+        Misc_Output(:,1) = Data(:,1);
     end
-    Misc_Output(:,1) = Data(:,1);      
+
     i=i+1;
 end
 
 for m = 1:b(1,2)
     Misc_OUTPUT(:,m+1) = Misc_Output(:,m+1)*(Misc_Output(3,1)-Misc_Output(2,1))*box_x*box_y;
-    
+
 end
 
 for p = 1:b(1,2)
     Misc_OUTPUT_V(:,p+1) = Misc_OUTPUT(:,p+1)*Misc_Volumes(p);
-    
+
 end
 
 a = Misc_OUTPUT_V(:,3);
 MIN_Hyd = min(a(a > 0));
 % MIN_Hyd = 200;
-% 
+%
 % Misc_OUTPUT_V(:,3) = Misc_OUTPUT_V(:,3);
-% 
+%
 % Misc_OUTPUT_V(:,2) = Misc_OUTPUT_V(:,2);
 
 Misc_OUTPUT_V( Misc_OUTPUT_V <= 0 ) = 0;
@@ -127,33 +131,33 @@ Misc_OUTPUT_V( Misc_OUTPUT_V <= 0 ) = 0;
 
 for i = 1:20 %number of AA
     input = MATRIX(i);
-    
+
     if input == 0
     else
         Data = importfile(filenames{1,MATRIX(i)});
         Output(:,i+1) = Data (:,2);
-    
+
     end
-    Output(:,1) = Data(:,1);      
+    Output(:,1) = Data(:,1);
     i=i+1;
 end
 
 for m = 1:20
     OUTPUT(:,m+1) = Output(:,m+1)*(Output(3,1)-Output(2,1))*box_x*box_y;
-    
+
 end
 
 % volumes of the amino acids times the number of the amino acids in each
 % slice
 for p = 1:20
     OUTPUT_V(:,p+1) = OUTPUT(:,p+1)*str2double(SL(p,8));
-    
+
 end
 % mass of the amino acids times the number of the amino acids in each
 % slice
 for p = 1:20
     OUTPUT_M(:,p+1) = OUTPUT(:,p+1)*str2double(SL(p,6));
-    
+
 end
 
 
@@ -179,12 +183,12 @@ Surface_volfrac = Misc_OUTPUT_V(:,2)./V_TOT;
 
 for p = 1:20
     Frac_SLD(:,p+1) = V_frac_AA(:,p+1)*str2double(SL(p,5));
-    
+
 end
 
 for p = 1:20
     Frac_SLD_Hydrated(:,p+1) = V_frac_AA_Hydrated(:,p+1)*str2double(SL(p,5));
-    
+
 end
 
 VOLFRAC_Water = Hyd_Factor*Misc_OUTPUT_V(:,3)./V_TOT;

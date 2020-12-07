@@ -1,4 +1,4 @@
-function [SLD_AA_Hydrated_Profile,V_frac_AA_Hydrated,VOLFRAC_Surface,VOLFRAC_Water,Hyd_Factor,V_TOT,V_TOT_unmodified,Total_AA_Mass,Total_AA_Mass_layer,Total_AA_Adsorbed,D2O_Frac] = SLD_Plot(D2O_Frac,box_x,box_y,fh,HYD_factor,Upper_thickness)
+function [SLD_AA_Hydrated_Profile,V_frac_AA_Hydrated,VOLFRAC_Surface,VOLFRAC_Water,Hyd_Factor,V_TOT,V_TOT_unmodified,Total_AA_Mass,Total_AA_Mass_layer,Total_AA_Adsorbed,D2O_Frac] = SLD_Plot(D2O_Frac,box_x,box_y,fh,HYD_factor,Lower_thickness,Upper_thickness)
  %upper thickness cuts a SLD profile for matlab
 R = gaussmf(D2O_Frac,[0.4 1]);
 G = gaussmf(D2O_Frac,[0.25 0.5]);
@@ -16,6 +16,8 @@ B = gaussmf(D2O_Frac,[0.4 0]);
     V_frac_AA_Hydrated = V_frac_AA_Hydrated(SLD_AA_Hydrated_Profile(:,1) <= Upper_thickness, :)
     VOLFRAC_Surface= VOLFRAC_Surface(SLD_AA_Hydrated_Profile(:,1) <= Upper_thickness, :)
     VOLFRAC_Water = VOLFRAC_Water(SLD_AA_Hydrated_Profile(:,1) <= Upper_thickness, :)
+
+
     fh = 1;
     s_x = 20;
     s_y =570;

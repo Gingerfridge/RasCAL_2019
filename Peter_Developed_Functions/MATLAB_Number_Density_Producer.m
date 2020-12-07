@@ -1,6 +1,8 @@
 function [sucess,Ubuntu_Shell,folder_label] = MATLAB_Number_Density_Producer()
 %run after producting xtc file and .sh script
 % note you need a number density script for each folder
+% need to make an index with al the amino acids in it
+
 [sucess,Ubuntu_Shell] = Ubuntu_Input_Script('NumberDensity.sh')
 data_label = readtable('Data_label');
 folder_label = data_label.Properties.VariableNames{1,1};
