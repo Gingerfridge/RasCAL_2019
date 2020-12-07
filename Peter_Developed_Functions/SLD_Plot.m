@@ -7,16 +7,30 @@ B = gaussmf(D2O_Frac,[0.4 0]);
 
 
     [SLD_AA_Hydrated_Profile,V_frac_AA_Hydrated,VOLFRAC_Surface,VOLFRAC_Water,Hyd_Factor,V_TOT,V_TOT_unmodified,Total_AA_Mass,Total_AA_Mass_layer,Total_AA_Adsorbed,Output,SL,filenames,Logic_matrix,MATRIX,SLD_AA,OUTPUT,SLD_AA_Profile,OUTPUT_V,Misc_Matrix,Misc_OUTPUT,Misc_OUTPUT_V,V_TOT_AA] = SLDfunction_HYD(D2O_Frac,box_x,box_y,HYD_factor);
-    SLD_AA_Hydrated_Profile(:,1)=10*SLD_AA_Hydrated_Profile(:,1)  % convert to angstoms
+    SLD_AA_Hydrated_Profile(:,1)=10*SLD_AA_Hydrated_Profile(:,1);  % convert to angstoms
+    SLD_AA_Profile(:,1)=10*SLD_AA_Profile(:,1);  % convert to angstoms
     m = SLD_AA_Profile(:,1);
     a = m(1:find(m,1,'last'));
   %  Upper_thickness = a(1,end);
 
-    SLD_AA_Hydrated_Profile = SLD_AA_Hydrated_Profile(SLD_AA_Hydrated_Profile(:,1) <= Upper_thickness, :)% convert to angstoms
-    V_frac_AA_Hydrated = V_frac_AA_Hydrated(SLD_AA_Hydrated_Profile(:,1) <= Upper_thickness, :)
-    VOLFRAC_Surface= VOLFRAC_Surface(SLD_AA_Hydrated_Profile(:,1) <= Upper_thickness, :)
-    VOLFRAC_Water = VOLFRAC_Water(SLD_AA_Hydrated_Profile(:,1) <= Upper_thickness, :)
 
+
+
+
+
+
+
+    V_frac_AA_Hydrated = V_frac_AA_Hydrated(SLD_AA_Hydrated_Profile(:,1) >= Lower_thickness, :)
+    VOLFRAC_Surface= VOLFRAC_Surface(SLD_AA_Hydrated_Profile(:,1) >= Lower_thickness, :)
+    VOLFRAC_Water = VOLFRAC_Water(SLD_AA_Hydrated_Profile(:,1) >= Lower_thickness, :)
+    SLD_AA_Hydrated_Profile = SLD_AA_Hydrated_Profile(SLD_AA_Hydrated_Profile(:,1) >= Lower_thickness, :);
+
+    V_frac_AA_Hydrated = V_frac_AA_Hydrated(SLD_AA_Hydrated_Profile(:,1) <= Upper_thickness, :);
+    VOLFRAC_Surface= VOLFRAC_Surface(SLD_AA_Hydrated_Profile(:,1) <= Upper_thickness, :);
+    VOLFRAC_Water = VOLFRAC_Water(SLD_AA_Hydrated_Profile(:,1) <= Upper_thickness, :);
+
+
+    SLD_AA_Hydrated_Profile = SLD_AA_Hydrated_Profile(SLD_AA_Hydrated_Profile(:,1) <= Upper_thickness, :);% convert to angstoms
 
     fh = 1;
     s_x = 20;

@@ -63,12 +63,14 @@ str = filenames{1,j};
     %input the name of non AA residues here they will be out put in the
     %porder put in with the layer distance in misc_Ouput!
     GRAP(1,j) = contains(str,"AUM");
-    GRAP_SLD = 0e-6;
-    GRAP_Vol = 169.3;
+ 
     PW(1,j) = contains(str,"SOL");
-    PW_SLD = (6.35e-6+0.56e-6)*D2O_Frac-0.56e-6;
-    PW_Vol = 29.9; %A^3 actually all volumes should be for H2O (29.9+D2O_Frac*7 if you want variable volumes)
+  
 end
+GRAP_SLD = 0e-6;
+GRAP_Vol = 169.3 ;
+PW_SLD = (6.35e-6+0.56e-6)*D2O_Frac-0.56e-6;
+PW_Vol = 29.9; %A^3 actually all volumes should be for H2O (29.9+D2O_Frac*7 if you want variable volumes)
 
 Misc_Volumes = transpose([GRAP_Vol; PW_Vol]);
 
