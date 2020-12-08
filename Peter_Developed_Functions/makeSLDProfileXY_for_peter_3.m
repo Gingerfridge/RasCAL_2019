@@ -4,7 +4,7 @@ function [out,layerThicks] = makeSLDProfileXY_for_peter_3(nbair,nbsub,ssub,layer
 if numberOfLayers>0
     %work out total range....
     layerThicks = sum(layers(:,1));
-    totalRange = layerThicks + 200;   %50 � either side for air and sub..
+    totalRange = layerThicks + 50;   %50 � either side for air and sub..
     x = 0:totalRange;
 
     %1. Make air box...
