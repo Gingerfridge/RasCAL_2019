@@ -34,7 +34,7 @@ if numberOfLayers>0
     lastBoxEdge = thisBoxCentre + (thisLayThick/2);
 
 
-d
+doinvsdoinvionsdv
     %substrate
 %    thisLayThick = (x(end)-lastBoxEdge)*2;
 %    thisLaySLD = nbsub;
