@@ -20,7 +20,7 @@ SLD_Step = 0.1;
     %layers is[ thickness SLD roughness]
     %change bulk out to be the last layer for just the surface add a fully
     %hydrated layer for bulk out
-    [out,layerThicks] = makeSLDProfileXY_for_peter_2(bulk_in,bulk_out,layers(1,3),layers,layNumber)
+    [out,layerThicks] = makeSLDProfileXY_for_peter_3(bulk_in,bulk_out,layers(1,3),layers,layNumber)
 
     xout = out(:,1)
     yout = out(:,2)

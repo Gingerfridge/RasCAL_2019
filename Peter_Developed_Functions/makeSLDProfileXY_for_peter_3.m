@@ -1,4 +1,4 @@
-function [out,layerThicks] = makeSLDProfileXY_for_peter_2(nbair,nbsub,ssub,layers,numberOfLayers);
+function [out,layerThicks] = makeSLDProfileXY_for_peter_3(nbair,nbsub,ssub,layers,numberOfLayers);
 
 
 if numberOfLayers>0
