@@ -30,7 +30,7 @@ if numberOfLayers>0
     thisLayRough = layers(numberOfLayers,3);
     nextLayRough = ssub;
     thisBoxCentre = lastBoxEdge + (thisLayThick/2);
-    Lays(:,numberOfLayers) = asymconvstep(x,thisLayThick,thisBoxCentre,thisLayRough,nextLayRough,thisLaySLD);
+    Lays(:,numberOfLayers) = asymconvstep(x,thisLayThick,thisBoxCentre,0,0,thisLaySLD);
     lastBoxEdge = thisBoxCentre + (thisLayThick/2);
 
 
