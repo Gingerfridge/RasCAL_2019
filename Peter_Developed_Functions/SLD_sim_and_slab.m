@@ -29,7 +29,7 @@ SLD_Step = 0.1;
 
     % this adds the simultion to the slab model
     [xx,yy] = Rascal_XY_maker_slab_initiliser(params,bulk_in,bulk_out,contrast,starting_params_number);
-    tracker = totalRange-3
+    tracker = totalRange
     xx=xx(:)+tracker;
     yy=yy(:);
     xx = [xout(:); xx(:)];
