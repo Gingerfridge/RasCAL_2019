@@ -26,7 +26,10 @@ SLD_Step = 0.1;
     yout = out(:,2)
 
     if surface_switch == 1
+      [out,totalRange] = makeSLDProfileXY_for_peter_3(bulk_in,yout(end,2),layers(1,3),layers,layNumber,distance)
 
+      xout = out(:,1)
+      yout = out(:,2)
     % this adds the simultion to the slab model
     [xx,yy] = Rascal_XY_maker_slab_initiliser(params,bulk_in,bulk_out,contrast,starting_params_number);
     tracker = totalRange
