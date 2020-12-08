@@ -12,7 +12,7 @@ if numberOfLayers>0
     boxWidth = totalRange;
 
     boxRough = layers(1,3);
-    airBox = asymconvstep(x,boxWidth,boxCen,boxRough,boxRough,nbair);
+    airBox = asymconvstep(x,boxWidth,boxCen,boxRough,boxRough,1);
     lastBoxEdge = boxCen + (boxWidth/2);
 
     for i = 1:numberOfLayers-1;
@@ -30,7 +30,7 @@ if numberOfLayers>0
     thisLayRough = layers(numberOfLayers,3);
     nextLayRough = ssub;
     thisBoxCentre = lastBoxEdge + (thisLayThick/2);
-    Lays(:,numberOfLayers) = asymconvstep(x,thisLayThick,thisBoxCentre,0,0,thisLaySLD);
+    Lays(:,numberOfLayers) = asymconvstep(x,thisLayThick,thisBoxCentre,thisLayRough,nextLayRough,thisLaySLD);
     lastBoxEdge = thisBoxCentre + (thisLayThick/2);
 
 
@@ -41,8 +41,8 @@ if numberOfLayers>0
     thisLayRough = ssub;
     nextLayRough = ssub;
     thisBoxCentre = x(end);
-    %Lays(:,numberOfLayers+1) = asymconvstep(x,thisLayThick,thisBoxCentre,thisLayRough,nextLayRough,thisLaySLD);
-    %Lays(:,numberOfLayers+2) = airBox;
+    Lays(:,numberOfLayers+1) = asymconvstep(x,thisLayThick,thisBoxCentre,thisLayRough,nextLayRough,thisLaySLD);
+    Lays(:,numberOfLayers+2) = airBox;
 
     SLD = sum(Lays,2);
 
