@@ -20,7 +20,7 @@ SLD_Step = 0.1;
     %layers is[ thickness SLD roughness]
     %change bulk out to be the last layer for just the surface add a fully
     %hydrated layer for bulk out
-    [out,layerThicks] = makeSLDProfileXY_for_peter_3(bulk_in,bulk_out,layers(1,3),layers,layNumber)
+    [out,totalRange] = makeSLDProfileXY_for_peter_3(bulk_in,bulk_out,layers(1,3),layers,layNumber)
 
     xout = out(:,1)
     yout = out(:,2)
@@ -29,8 +29,8 @@ SLD_Step = 0.1;
 
     % this adds the simultion to the slab model
     [xx,yy] = Rascal_XY_maker_slab_initiliser(params,bulk_in,bulk_out,contrast,starting_params_number);
-    tracker = layerThicks
-    xx=xx(:)+tracker+160;
+    tracker = totalRange
+    xx=xx(:)+tracker;
     yy=yy(:);
     xx = [xout(:); xx(:)];
     yy = [yout(:); yy(:)];
