@@ -36,13 +36,13 @@ if numberOfLayers>0
 
 
     %substrate
-    thisLayThick = (x(end)-lastBoxEdge)*2;
-    thisLaySLD = nbsub;
-    thisLayRough = ssub;
-    nextLayRough = ssub;
-    thisBoxCentre = x(end);
-    Lays(:,numberOfLayers+1) = asymconvstep(x,thisLayThick,thisBoxCentre,thisLayRough,nextLayRough,thisLaySLD);
-    Lays(:,numberOfLayers+2) = airBox;
+%    thisLayThick = (x(end)-lastBoxEdge)*2;
+%    thisLaySLD = nbsub;
+%    thisLayRough = ssub;
+%    nextLayRough = ssub;
+%    thisBoxCentre = x(end);
+%    Lays(:,numberOfLayers+1) = asymconvstep(x,thisLayThick,thisBoxCentre,thisLayRough,nextLayRough,thisLaySLD);
+%    Lays(:,numberOfLayers+2) = airBox;
 
     SLD = sum(Lays,2);
 
