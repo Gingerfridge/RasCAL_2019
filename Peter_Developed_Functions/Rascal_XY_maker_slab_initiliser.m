@@ -11,7 +11,7 @@ Hydration = params(starting_params_number);
 for i = 1:contrast
 %need to convert hydration to the same scale as 'Hydration variable'
 %change the rounding for more pricise
-D2O_Frac = round(D2O_Frac,2);
+D2O_Frac = round(D2O_Frac,0);
 Hydration = round(Hydration,0);
 st_val = bulk_in(contrast);
 end_val = bulk_out(contrast);
