@@ -1,0 +1,54 @@
+# This file was created Tue Dec  8 00:36:59 2020
+# Created by:
+#             :-) GROMACS - gmx density, 2020.1-Ubuntu-2020.1-1 (-:
+# 
+# Executable:   /usr/bin/gmx
+# Data prefix:  /usr
+# Working dir:  /mnt/c/Users/mbcx4ph5/Dropbox (The University of Manchester)/PhD/CSF - Manchester/Computational Work/Gromacs/Job_48_Imperial_work_1/files
+# Command line:
+#   gmx density -s prod-16.tpr -f prod-16.xtc -n index_1_1.ndx -sl 30 -dens number -o NumDens_00010_00010_Job_48_30_GLY.xvg -b 00010 -e 00010
+# gmx density is part of G R O M A C S:
+#
+# GRowing Old MAkes el Chrono Sweat
+#
+@    title "Partial density"
+@    xaxis  label "Coordinate (nm)"
+@    yaxis  label "Number density (nm\S-3\N)"
+@TYPE xy
+@ view 0.15, 0.15, 0.75, 0.85
+@ legend on
+@ legend box on
+@ legend loctype view
+@ legend 0.78, 0.8
+@ legend length 2
+@ s0 legend "GLY"
+    0.416667                0
+        1.25                0
+     2.08333                0
+     2.91667                0
+        3.75                0
+     4.58333                0
+     5.41667                0
+        6.25                0
+     7.08333                0
+     7.91667                0
+        8.75                0
+     9.58333        0.0071136
+     10.4167         0.111446
+       11.25         0.116189
+     12.0833         0.220522
+     12.9167         0.312998
+       13.75         0.457642
+     14.5833         0.339082
+     15.4167         0.279802
+       16.25         0.317741
+     17.0833         0.211037
+     17.9167        0.0877344
+       18.75        0.0616512
+     19.5833                0
+     20.4167                0
+       21.25                0
+     22.0833                0
+     22.9167                0
+       23.75                0
+     24.5833                0

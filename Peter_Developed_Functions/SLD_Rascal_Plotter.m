@@ -1,4 +1,4 @@
-function [Project_struct] = SLD_Rascal_Plotter(name_of_project,SLD_plot,Reflect_plot)
+function [Project_struct] = SLD_Rascal_Plotter(name_of_project,SLD_plot,Reflect_plot,Data_plot)
 
 
 
@@ -12,7 +12,7 @@ if SLD_plot == 1
   for i = 1:Project_struct.problem.numberOfContrasts
   a = Project_struct.problem.calculations.slds{1,i}
   hold on
-  col = i/Project_struct.problem.numberOfContrasts;
+      col = (Project_struct.problem.nbsubs(i)+0.56e-6)/(6.35e-6+0.56e-6); % this will not work for repeating contrasts;
 
   R = gaussmf(col,[0.4 1]);
   G = gaussmf(col,[0.25 0.5]);
@@ -36,7 +36,7 @@ if Reflect_plot == 1
       b = Project_struct.problem.data{1,j}
       b(:,2) = 10^(-1*j)*b(:,2);
   hold on
-    col = j/Project_struct.problem.numberOfContrasts;
+    col = (Project_struct.problem.nbsubs(j)+0.56e-6)/(6.35e-6+0.56e-6); % this will not work for repeating contrasts
 
     R = gaussmf(col,[0.4 1]);
     G = gaussmf(col,[0.25 0.5]);
@@ -44,7 +44,10 @@ if Reflect_plot == 1
         pubgraph(2,-500,1200,1920/1.5,1080/1.5)
   loglog(a(:,1),a(:,2),'color',[R G B])
   hold on
-  loglog(b(:,1),b(:,2),"x",'color',[R G B])
+  if Data_plot == 1
+    loglog(b(:,1),b(:,2),"x",'color',[R G B])
+  else
+  end
   xlabel('q (A^-^1)')
   ylabel('Ref')
   set(gca, 'YScale', 'log')

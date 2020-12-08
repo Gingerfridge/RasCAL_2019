@@ -1,0 +1,54 @@
+# This file was created Tue Dec  8 00:36:49 2020
+# Created by:
+#             :-) GROMACS - gmx density, 2020.1-Ubuntu-2020.1-1 (-:
+# 
+# Executable:   /usr/bin/gmx
+# Data prefix:  /usr
+# Working dir:  /mnt/c/Users/mbcx4ph5/Dropbox (The University of Manchester)/PhD/CSF - Manchester/Computational Work/Gromacs/Job_48_Imperial_work_1/files
+# Command line:
+#   gmx density -s prod-16.tpr -f prod-16.xtc -n index_1_1.ndx -sl 30 -dens number -o NumDens_00010_00010_Job_48_30_SOL.xvg -b 00010 -e 00010
+# gmx density is part of G R O M A C S:
+#
+# Georgetown Riga Oslo Madrid Amsterdam Chisinau Stockholm
+#
+@    title "Partial density"
+@    xaxis  label "Coordinate (nm)"
+@    yaxis  label "Number density (nm\S-3\N)"
+@TYPE xy
+@ view 0.15, 0.15, 0.75, 0.85
+@ legend on
+@ legend box on
+@ legend loctype view
+@ legend 0.78, 0.8
+@ legend length 2
+@ s0 legend "SOL"
+    0.416667                0
+        1.25                0
+     2.08333                0
+     2.91667                0
+        3.75                0
+     4.58333                0
+     5.41667        0.0094848
+        6.25          8.23281
+     7.08333          81.2587
+     7.91667          97.4492
+        8.75          97.2856
+     9.58333          97.1362
+     10.4167          96.0952
+       11.25          90.8905
+     12.0833          84.4669
+     12.9167          81.8609
+       13.75          81.2444
+     14.5833          82.0886
+     15.4167           81.887
+       16.25          84.1515
+     17.0833          88.8678
+     17.9167           93.513
+       18.75           86.831
+     19.5833          14.3102
+     20.4167                0
+       21.25                0
+     22.0833        0.0071136
+     22.9167                0
+       23.75        0.0071136
+     24.5833        0.0071136

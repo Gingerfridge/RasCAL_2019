@@ -1,4 +1,5 @@
 function [xx,yy] = SLD_sim_and_slab_no_rough(params,bulk_in,bulk_out,contrast,surface_switch)
+
 SLD_Step = 0.1;
 %input here the parameters needed to make a slab model
     layNumber = params(2); %initilising the number of layers wanted in the fit
