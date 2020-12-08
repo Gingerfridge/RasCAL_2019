@@ -41,7 +41,7 @@ if numberOfLayers>0
     thisLayRough = ssub;
     nextLayRough = ssub;
     thisBoxCentre = x(end);
-    Lays(:,numberOfLayers+1) = asymconvstep(x,thisLayThick,thisBoxCentre,thisLayRough,nextLayRough,thisLaySLD);
+    %Lays(:,numberOfLayers+1) = asymconvstep(x,thisLayThick,thisBoxCentre,thisLayRough,nextLayRough,thisLaySLD);
     %Lays(:,numberOfLayers+2) = airBox;
 
     SLD = sum(Lays,2);
