@@ -12,7 +12,7 @@ if numberOfLayers>0
     boxWidth = totalRange;
 
     boxRough = layers(1,3);
-    airBox = asymconvstep(x,boxWidth,boxCen,boxRough,boxRough,1);
+    airBox = asymconvstep(x,boxWidth,boxCen,boxRough,boxRough,nbair);
     lastBoxEdge = boxCen + (boxWidth/2);
 
     for i = 1:numberOfLayers-1;
