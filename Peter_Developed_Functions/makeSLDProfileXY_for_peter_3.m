@@ -36,7 +36,7 @@ if numberOfLayers>0
 
 
     %substrate
-    thisLayThick = 10;
+    thisLayThick = (x(end)-4)*2;
     thisLaySLD = nbsub;
     thisLayRough = ssub;
     nextLayRough = ssub;
